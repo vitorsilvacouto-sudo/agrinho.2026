@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>EcoCampo - Agricultura Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Botão de acessibilidade fixo -->
+    <div class="botao-acessibilidade" id="botaoAcessibilidade">
+        <button id="btnAumentarFonte" aria-label="Aumentar fonte">A+</button>
+        <button id="btnDiminuirFonte" aria-label="Diminuir fonte">A-</button>
+        <button id="btnAltoContraste" aria-label="Alto contraste">🌓</button>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🌱 EcoCampo</h1>
+                <p>Agro forte, futuro sustentável</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#problemas">Problemas</a></li>
+                    <li><a href="#dicas">Dicas</a></li>
+                    <li><a href="#jogo">Jogo</a></li>
+                    <li><a href="#curiosidades">Curiosidades</a></li>
+                    <li><a href="#conclusao">Conclusão</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="secao">
+            <div class="container">
+                <h2>Bem-vindo ao EcoCampo</h2>
+                <p>Produzir alimentos e preservar o meio ambiente é possível! Aqui você aprende como unir a força do agro com a sustentabilidade.</p>
+                <img src="https://via.placeholder.com/800x400?text=Campo+Sustentável" alt="Campo com plantação e natureza preservada" class="imagem-destaque">
+            </div>
+        </section>
+
+        <section id="sobre" class="secao">
+            <div class="container">
+                <h2>Sobre o EcoCampo</h2>
+                <p>O projeto EcoCampo foi criado para conscientizar sobre a importância da agricultura sustentável. Mostramos como é possível produzir alimentos de forma eficiente sem agredir o meio ambiente, preservando a água, o solo e a biodiversidade.</p>
+                <p><strong>Objetivo:</strong> Ensinar práticas ecológicas no campo e incentivar atitudes sustentáveis no dia a dia.</p>
+            </div>
+        </section>
+
+        <section id="problemas" class="secao">
+            <div class="container">
+                <h2>Problemas ambientais no campo</h2>
+                <article>
+                    <h3>Desperdício de água</h3>
+                    <p>A irrigação mal planejada pode desperdiçar até 50% da água utilizada. Técnicas como gotejamento e captação de chuva ajudam a economizar.</p>
+                </article>
+                <article>
+                    <h3>Uso excessivo de agrotóxicos</h3>
+                    <p>Produtos químicos em excesso contaminam o solo e os rios. O manejo integrado de pragas é uma alternativa mais sustentável.</p>
+                </article>
+                <article>
+                    <h3>Desmatamento e queimadas</h3>
+                    <p>A retirada da vegetação nativa e as queimadas destroem habitats e empobrecem o solo. Preservar as matas ciliares é essencial.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="dicas" class="secao">
+            <div class="container">
+                <h2>Dicas de preservação ambiental</h2>
+                <ul>
+                    <li>💧 Reutilize a água da chuva para irrigação.</li>
+                    <li>🌱 Adote o plantio direto para conservar o solo.</li>
+                    <li>🐝 Plante árvores nativas e preserve a biodiversidade.</li>
+                    <li>♻️ Recicle embalagens de defensivos agrícolas.</li>
+                    <li>☀️ Invista em energia solar na propriedade rural.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Jogo estilo trilha (perguntas + avanço por casa) -->
+        <section id="jogo" class="secao">
+            <div class="container">
+                <h2>🌾 Corrida Sustentável - Jogo de Trilha</h2>
+                <p>Responda corretamente as perguntas sobre meio ambiente e agricultura. A cada acerto, o personagem avança uma casa até a chegada!</p>
+                
+                <div class="area-jogo">
+                    <div class="pista">
+                        <div class="personagem" id="personagem">🚜</div>
+                        <div class="chegada">🏁</div>
+                    </div>
+                    <div class="velocimetro">Progresso: <span id="progresso">0</span> / 5</div>
+                    
+                    <div class="pergunta-container" id="perguntaContainer">
+                        <p id="perguntaTexto">Clique em "Iniciar Jogo" para começar</p>
+                        <div id="alternativas" class="alternativas"></div>
+                        <button id="btnProximo" style="display: none;">Próxima pergunta</button>
+                    </div>
+                    
+                    <div class="controles-jogo">
+                        <button id="btnIniciarJogo" class="btn-jogo">🌿 Iniciar Jogo</button>
+                        <button id="btnReiniciar" class="btn-jogo">🔄 Reiniciar</button>
+                    </div>
+                    
+                    <div id="mensagemFinal" class="mensagem-final"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="curiosidades" class="secao">
+            <div class="container">
+                <h2>Curiosidades sustentáveis</h2>
+                <ul>
+                    <li>🌍 A agricultura orgânica pode reduzir em até 40% a emissão de gases de efeito estufa.</li>
+                    <li>💧 Uma única árvore nativa pode absorver até 150 litros de água da chuva por ano.</li>
+                    <li>🐞 Joaninhas são usadas como controle biológico de pragas, substituindo agrotóxicos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="conclusao" class="secao">
+            <div class="container">
+                <h2>Conclusão</h2>
+                <p>O equilíbrio entre produção agrícola e meio ambiente é possível. Com pequenas atitudes – como economizar água, preservar a vegetação e usar técnicas sustentáveis – podemos garantir um futuro melhor para o campo e para todos. O EcoCampo acredita que um agro forte é um agro sustentável!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Projeto EcoCampo - Concurso Agrinho 2026</p>
+            <p>Desenvolvido por Vitor Emanoel da Silva do Couto</p>
+            <p>📧 contato@ecocampo.com.br | 🌱 Sustentabilidade no campo</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
